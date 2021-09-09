@@ -25,15 +25,21 @@ const Meal = (props) => {
   }
 
   return (
-    <div>
-      <h3>{meal.strMeal}</h3>
-      <div>
-        <div className="ingredients">
-          <div>
-            <h3>ingredients:</h3>
+    <div className="recipe-container">
+      <h2>{meal.strMeal}</h2>
+      <div className="picNdir-container">
+        <img src={meal.strMealThumb} alt={meal.strMeal} />
+
+        <div className="recipe-text">
+          <div className="ingredients">
+            <h3>Ingredients:</h3>
             {ingredients.map((item) => {
               return <div>{item}</div>;
             })}
+          </div>
+          <div className="directions">
+            <h3>Directions:</h3>
+            <p>{meal.strInstructions}</p>
           </div>
         </div>
       </div>

@@ -2,10 +2,35 @@
   text-align: center;
   padding: 40px;
 }
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+}
+.recipe-container img {
+  display: flex;
+  object-fit: contain;
+  max-width: 40vw;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  padding: 40px 5px;
+  border: none;
+}
+.recipe-container button {
+  width: 150px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.picNdir-container {
+  display: flex;
+  align-items: flex-start;
+}
+.ingredients {
+  text-align: left;
+  padding: 20px;
+}
+.directions {
+  text-align: justify;
+  padding: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
