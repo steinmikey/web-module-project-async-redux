@@ -5,14 +5,14 @@ import { connect } from "react-redux";
 import { getMeal } from "../actions";
 
 const Meal = (props) => {
-  const { meal, isFetching, error } = props;
+  const { meal, getMeal } = props;
 
   useEffect(() => {
-    props.getMeal();
-  }, []);
+    getMeal();
+  }, [getMeal]);
 
   const handleNewMeal = () => {
-    props.getMeal();
+    getMeal();
   };
   const ingredients = [];
   for (let i = 1; i < 21; i++) {
